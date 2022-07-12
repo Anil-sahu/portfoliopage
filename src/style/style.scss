@@ -1,0 +1,427 @@
+$backgroundColor: rgb(9, 244, 134);
+$font: Verdana, Geneva, Tahoma, sans-serif;
+$textColor: rgb(43, 43, 44);
+$level1: red;
+$level2: orange;
+$level3: yellow;
+$level4: rgb(81, 248, 81);
+$level5: rgb(0, 217, 255);
+$level6: blue;
+$react: #c2f1fc;
+$css: #2965f1;
+$bstrp: #563d7c;
+$node: #a9f8a2;
+$dart: #2e5bfb;
+$dj: #381818;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.nav-button {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 92vh;
+    box-shadow: 2px 1px 5px grey;
+    background-color: white;
+    width: fit-content;
+
+    border-radius: 8px;
+
+    a {
+        margin: 0px 10px;
+
+        text-align: center;
+        text-decoration: none;
+
+        p {
+            font-size: 12px;
+            color: $textColor;
+            font-size: large;
+            font-family: $font ;
+            font-weight: 600;
+        }
+    }
+
+    a:hover {
+        background-color: #98b4f6;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+
+}
+
+::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #73ecf7;
+}
+
+.skill-page {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.active {
+    background-color: rgb(7, 75, 246);
+    box-shadow: 1px 2px 5px grey;
+    color: #2965f1;
+    border-radius: 8px;
+    color: white;
+    padding: 12px 0px;
+}
+
+
+.skill-card {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto 10px;
+    height: 92vh;
+    overflow-y: scroll;
+    overflow-x: hiddens;
+    box-shadow: 1px 3px 10px white;
+    padding: 20px;
+    justify-content: space-around;
+    box-shadow: 1px 1px 5px grey;
+    border-radius: 8px;
+    background-color: white;
+
+    .skill {
+        display: flex;
+        flex-direction: column;
+        width: 49%;
+        justify-content: start;
+        margin-top: 20px;
+        padding: 10px 0px 0px 0px;
+        border-radius: 8px;
+
+        .skill-cont {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+        }
+
+        .skill-image {
+            width: 100px;
+            height: 100px;
+
+
+        }
+
+        .skill-progress {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            flex-direction: column;
+
+
+            p {
+                color: white;
+                font-weight: 600;
+                width: fit-content;
+            }
+        }
+
+        .skill-bottom {
+            display: flex;
+            justify-content: space-between;
+            background-color: darkgoldenrod;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+
+
+            .skill-name {
+
+                text-align: center;
+                padding: 12px 20px;
+                font-weight: bolder;
+            }
+
+            .skill-more-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 50%;
+
+                .facode {
+                    color: #381818;
+                    background-color: #d3ccde;
+                    // border: 1px solid rgb(187, 0, 255);
+                    padding: 5px;
+                    // box-shadow: 1px 1px 5px white;
+                    border-radius: 50%;
+                    width: 20px;
+                    margin: auto 0px;
+                }
+
+                .facode:hover {
+                    background-color: #73ecf7;
+                    cursor: pointer;
+                    box-shadow: 1px 1px 5px white;
+                }
+            }
+        }
+    }
+
+    .skill:hover {
+
+        box-shadow: 2px 2px 5px rgb(84, 84, 84);
+        border: 1px solid black;
+    }
+}
+
+
+
+.project-card {
+    width: 90%;
+    display: flex;
+
+    flex-wrap: wrap;
+    margin: auto 10px;
+    height: 92vh;
+    overflow-y: scroll;
+    overflow-x: hiddens;
+    padding: 20px;
+    justify-content: space-around;
+    box-shadow: 1px 1px 5px grey;
+    border-radius: 8px;
+    background-color: white;
+
+    .project-title {
+        text-align: left;
+        margin: 20px;
+    }
+
+    .about-broject {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        .project-description {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            overflow-y: scroll;
+            overflow-x: hiddens;
+
+            p {
+                text-align: justify;
+                margin: 20px;
+            }
+        }
+
+        .project-imge {
+            width: 50%;
+            height: auto;
+            box-shadow: 1px 1px 5px grey;
+
+            img {
+                height: 90%;
+            }
+
+            .inc-dec {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                height: 20px;
+                justify-content: center;
+            }
+
+        }
+    }
+
+}
+
+@keyframes navBar {}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.home {
+
+    background-color: $backgroundColor;
+
+    .home-page {
+        width: 100%;
+        padding: 50px;
+        font-family: $font ;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .intro {
+            width: 50%;
+            height: fit-content;
+        }
+
+        .profile {
+            width: 50%;
+            height: fit-content;
+        }
+    }
+
+    .contact-box {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: $backgroundColor;
+        justify-content: space-around;
+    }
+}
+
+
+
+.contactdetail {
+    .contact-popup {
+        width: fit-content;
+        display: none;
+        position: absolute;
+
+        .num {
+            padding: 12px;
+            background-color: black;
+            color: white;
+            z-index: 2;
+            width: fit-content;
+            font-size: 16px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        .down {
+            width: 30px;
+            margin-left: -0.5px;
+            margin-top: -8px;
+            z-index: -1;
+        }
+    }
+
+    .phone-image {
+        width: 30px;
+        margin-top: 100px;
+
+
+    }
+}
+
+
+
+@media (min-width:992px) {}
+
+@media (max-width:991.9px) {}
+
+@media (max-width:768px) {
+
+
+    .skill-card {
+
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        .skill {
+
+            width: 100%;
+
+
+            .skill-cont {
+                display: flex;
+
+            }
+
+            .skill-image {}
+
+            .skill-progress {
+
+                p {}
+            }
+
+            .skill-bottom {
+
+                .skill-name {
+
+                    text-align: center;
+
+                }
+
+                .skill-more-info {
+                    display: flex;
+
+
+                    .facode {
+                        color: #381818;
+
+                    }
+
+                    .facode:hover {
+                        background-color: #73ecf7;
+
+                    }
+                }
+            }
+        }
+
+        .skill:hover {
+            box-shadow: 2px 2px 5px rgb(84, 84, 84);
+            border: 1px solid black;
+        }
+    }
+
+
+
+    .nav-button {
+
+        width: fit-content;
+        border-radius: 8px;
+
+        .icon-class {
+            font-size: 20px;
+        }
+
+        a {
+            margin: 0px 10px;
+
+            text-align: center;
+            text-decoration: none;
+
+            p {
+                font-size: 12px;
+                color: $textColor;
+                font-size: large;
+                font-family: $font ;
+                font-weight: 600;
+            }
+        }
+
+        a:hover {
+            background-color: #98b4f6;
+        }
+    }
+
+
+}
+
+@media (max-width:576px) {}

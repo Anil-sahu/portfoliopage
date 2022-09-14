@@ -20,16 +20,18 @@
   margin: 0px 10px;
   text-align: center;
   text-decoration: none;
+  padding: 5px;
 }
 .nav-button a p {
   font-size: 12px;
   color: rgb(43, 43, 44);
-  font-size: large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 600;
 }
 .nav-button a:hover {
   background-color: #98b4f6;
+  padding: 5px;
+  border-radius: 12px;
 }
 
 ::-webkit-scrollbar {
@@ -58,12 +60,12 @@
 }
 
 .active {
-  background-color: rgb(7, 75, 246);
+  background-color: rgb(193, 208, 248);
   box-shadow: 1px 2px 5px grey;
-  color: #2965f1;
-  border-radius: 8px;
+  color: #323233;
+  border-radius: 12px;
   color: white;
-  padding: 12px 0px;
+  padding: 5px;
 }
 
 .skill-card {
@@ -74,7 +76,7 @@
   margin: auto 10px;
   height: 92vh;
   overflow-y: scroll;
-  overflow-x: hiddens;
+  overflow-x: hidden;
   box-shadow: 1px 3px 10px white;
   padding: 20px;
   justify-content: space-around;
@@ -163,6 +165,24 @@
   border-radius: 8px;
   background-color: white;
 }
+.project-card .bubble_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.project-card .bubble_box .button_next {
+  width: 20px;
+  height: 30px;
+}
+.project-card .bubble {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 12px;
+  margin: 10px;
+  background-color: rgba(24, 23, 23, 0.253);
+}
 .project-card .project-title {
   text-align: left;
   margin: 20px;
@@ -184,12 +204,19 @@
   margin: 20px;
 }
 .project-card .about-broject .project-imge {
-  width: 50%;
-  height: auto;
+  width: 40%;
+  height: 300px;
   box-shadow: 1px 1px 5px grey;
 }
 .project-card .about-broject .project-imge img {
-  height: 90%;
+  width: 100%;
+  height: 100%;
+}
+.project-card .about-broject .project-imge .img_bubble {
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: rgba(24, 23, 23, 0.253);
 }
 .project-card .about-broject .project-imge .inc-dec {
   width: 100%;
@@ -197,6 +224,11 @@
   flex-direction: row;
   height: 20px;
   justify-content: center;
+}
+.project-card .about-broject .project-imge .inc-dec img {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
 }
 
 @-webkit-keyframes navBar {}
@@ -209,71 +241,189 @@
 }
 
 .home {
-  background-color: rgb(9, 244, 134);
+  background-color: rgb(255, 255, 255);
 }
 .home .home-page {
-  width: 100%;
-  padding: 50px;
+  width: 90%;
+  height: 80%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  background-color: black;
+  border-radius: 15px;
 }
 .home .home-page .intro {
-  width: 50%;
+  display: block;
+  width: 60%;
+  height: 70%;
+  border-radius: 15px;
+  padding: 20px;
+}
+.home .home-page .profile {
+  width: 40%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-.home .home-page .profile {
-  width: 50%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+.home .home-page .profile img {
+  height: 300px;
 }
 .home .contact-box {
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: rgb(9, 244, 134);
   justify-content: space-around;
+  margin-top: -10px;
 }
 
+.contactdetail {
+  height: 50px;
+  margin-top: 15px;
+}
 .contactdetail .contact-popup {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: none;
   position: absolute;
+  margin-top: -50px;
+  margin-left: 20px;
 }
 .contactdetail .contact-popup .num {
-  padding: 12px;
+  padding: 8px;
   background-color: black;
   color: white;
   z-index: 2;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 10px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+  margin-bottom: -5px;
 }
 .contactdetail .contact-popup .down {
-  width: 30px;
-  margin-left: -0.5px;
-  margin-top: -8px;
+  width: 20px;
+  margin-left: -40px;
   z-index: -1;
 }
 .contactdetail .phone-image {
-  width: 30px;
-  margin-top: 100px;
+  width: 40px;
+  background-color: 251;
+  border-radius: 25%;
+  margin-top: 0px;
+  padding: 10px;
+  background-color: rgba(130, 164, 243, 0.4980392157);
+}
+.contactdetail .phone-image:hover {
+  background-color: rgba(130, 164, 243, 0.4980392157);
+  box-shadow: 1px 1px 5px grey;
+  border: 1px dotted rgb(52, 51, 51);
+}
+
+/* Slideshow */
+.heading2 {
+  display: block;
+  color: rgb(247, 247, 247);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 20px;
+  overflow: auto;
+}
+
+.heading3 {
+  text-align: left;
+  font-size: 18px;
+  overflow: auto;
+  width: 100%;
+}
+
+.paragraph {
+  text-align: left;
+  height: 300px;
+  margin: 30px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  overflow-wrap: break-word;
+  color: #d4d4d4;
+}
+
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 500px;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.slide {
+  display: inline-block;
+  height: 400px;
+  width: 100%;
+  border-radius: 40px;
+}
+
+/* Buttons */
+.slideshowDots {
+  text-align: center;
+}
+
+.slideshowDot {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+  background-color: #c4c4c4;
+}
+
+.slideshowDot.active {
+  background-color: #6a0dad;
 }
 
 @media (max-width: 768px) {
+  .body {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .project-card {
+    width: 98%;
+    margin: 10px auto;
+  }
+  .project-card .about-broject {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .project-card .about-broject .project-description {
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  .project-card .about-broject .project-imge {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .project-card .about-broject .project-imge img {
+    width: 300px;
+  }
   .skill-card {
     flex-direction: column;
     flex-wrap: nowrap;
+    width: 98%;
+    margin: 10px auto;
+    justify-content: unset;
+  }
+  .skill-card .home-page {
+    width: 99%;
   }
   .skill-card .skill {
     width: 100%;
@@ -281,8 +431,18 @@
   .skill-card .skill .skill-cont {
     display: flex;
   }
+  .skill-card .skill .skill-image {
+    width: 80px;
+    height: 80px;
+    margin: auto 5px;
+  }
+  .skill-card .skill .skill-progress {
+    margin-right: 10px;
+    width: 70%;
+  }
   .skill-card .skill .skill-bottom .skill-name {
     text-align: center;
+    font-size: 12px;
   }
   .skill-card .skill .skill-bottom .skill-more-info {
     display: flex;
@@ -298,27 +458,27 @@
     border: 1px solid black;
   }
   .nav-button {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    margin-top: 0px;
+    padding: 10px;
   }
-  .nav-button .icon-class {
-    font-size: 20px;
+  .home .home-page {
+    height: 85%;
   }
-  .nav-button a {
-    margin: 0px 10px;
+  .home .home-page .intro .paragraph {
     text-align: center;
-    text-decoration: none;
+    justify-content: stretch;
   }
-  .nav-button a p {
-    font-size: 12px;
-    color: rgb(43, 43, 44);
-    font-size: large;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
+  .home .home-page .profile {
+    margin: auto 0px;
+    height: 60%;
   }
-  .nav-button a:hover {
-    background-color: #98b4f6;
+  .home .home-page .profile img {
+    height: 250px;
   }
 }/*# sourceMappingURL=style.css.map */

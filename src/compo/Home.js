@@ -7,8 +7,9 @@ import Linkdin from './../image/linkedin.svg';
 import Github from './../image/github.svg';
 import Navbutton from './Navbutton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faCode, faAward, faDiagramProject } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faCode, faAward, faDiagramProject } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom'
+import Slideshow from './slideshow';
 
 const Home = () => {
   return (
@@ -16,19 +17,19 @@ const Home = () => {
       <div className='body'>
         <div className='nav-button'>
           <NavLink to='/'>
-            <FontAwesomeIcon icon={faHome} color='black' size='2x'></FontAwesomeIcon>
-            <p>Home</p>
+            <FontAwesomeIcon icon={faUser} color='black' size='1x'></FontAwesomeIcon>
+            <p>Intro</p>
           </NavLink>
           <NavLink to='/skill'>
-            <FontAwesomeIcon icon={faCode} color='black' size='2x'></FontAwesomeIcon><p>Skill</p>
+            <FontAwesomeIcon icon={faCode} color='black' size='1x'></FontAwesomeIcon><p>Skill</p>
 
           </NavLink>
-          <NavLink to='/certificate'>
-            <FontAwesomeIcon icon={faAward} color='black' size='2x'></FontAwesomeIcon><p>Learn</p>
+          {/* <NavLink to='/certificate'>
+            <FontAwesomeIcon icon={faAward} color='black' size='1x'></FontAwesomeIcon><p>Learn</p> */}
 
-          </NavLink>
+          {/* </NavLink> */}
           <NavLink to='/project'>
-            <FontAwesomeIcon icon={faDiagramProject} color='black' size='2x'></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faDiagramProject} color='black' size='1x'></FontAwesomeIcon>
             <p>Project</p>
 
           </NavLink>
@@ -37,10 +38,19 @@ const Home = () => {
         </div>
         <div className='skill-card home'>
           <div className='home-page'>
+
             <div className='intro'>
-              <h2>Hi! I'm Anil.</h2>
-              <p>You might be familiar with the reference symbol, which allows you to reference a parent element as such:</p>
+              <div className="heading2"> HELLO! I'M ANIL
+                {/* .<strong>&</strong> I'M A DEVELOPER. */}
+              </div>,
+
+              {/* <div className="heading3">Developer, FLutter Framework, Firebase,.<br></br> Dart programming language, Java programming Language,<br></br> HTML&HTML5, CSS&CSS3,SASS, javaScript, RestApi</div>, */}
+              <p className="paragraph">I'm a Flutter Android Application developer and web Developer, but still exploring other technologies and frameworks that catch my interest!if you're looking for a developer to add to your team, I'd love to hear from you</p>
+
             </div>
+
+
+
             <div className='profile'>
               <img src={Profile} alt="My profile"></img>
             </div>

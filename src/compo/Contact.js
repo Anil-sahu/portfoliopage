@@ -9,14 +9,14 @@ const Contact = (props) => {
   }
 
   function hide() {
-   document.getElementById("popup").style.display = 'none';
+    document.getElementById("popup").style.display = 'none';
   }
   return (
     <>
       <div className='contactdetail'>
         <div className='contact-popup' id='popup'>
           <div className='num'>
-            {props.mobile}
+            Click Here.
           </div>
           <img src={Down} alt="down" className='down'></img>
         </div>

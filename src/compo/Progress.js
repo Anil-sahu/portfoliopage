@@ -8,7 +8,8 @@ const Progress = ({ bgcolor, progress, height }) => {
         width: '80%',
         backgroundColor: 'whitesmoke',
         borderRadius: 40,
-        margin: 50
+        margin: 50,
+
     }
 
     const Childdiv = {

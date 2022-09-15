@@ -8,10 +8,10 @@ import Certificate from './compo/Certificate';
 import Project from './compo/Project';
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL || ""}>
       <div className="App">
 
-        <Routes>
+        <Routes >
           <Route path='/' element={< Home />}></Route>
           <Route exact path='/skill' element={< Skill />}></Route>
 
